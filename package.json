@@ -1,0 +1,51 @@
+{
+  "name": "camera4nodejs",
+  "version": "1.0.0",
+  "description": "camera4nodejs is a lightweight, cross-platform library for capturing RGB frames from cameras and displaying them. Designed with simplicity and ease of integration in mind, LiteCam supports Windows, Linux and macOS platforms.",
+  "keywords": [
+    "camera",
+    "webcam",
+    "video capture",
+    "camera capture",
+    "windows",
+    "linux",
+    "macos"
+  ],
+  "author": "yushulx",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yushulx/nodejs-lite-camera.git"
+  },
+  "homepage": "https://github.com/yushulx/nodejs-lite-camera#readme",
+  "main": "index.js",
+  "files": [
+    "platforms/",
+    "scripts/",
+    "src/",
+    "index.js",
+    "index.d.ts",
+    "binding.gyp",
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "nativeLoader.js",
+    "test.js"
+  ],
+  "types": "index.d.ts",
+  "typings": "",
+  "scripts": {
+    "preinstall": "npm run check-global-deps",
+    "install": "npm run configure && npm run build",
+    "configure": "node-gyp configure",
+    "build": "node-gyp configure build --jobs max",
+    "postinstall": "node ./scripts/postinstall.js",
+    "clean": "node-gyp clean",
+    "check-global-deps": "node ./scripts/checkGlobalDeps.js"
+  },
+  "gypfile": true,
+  "devDependencies": {
+    "@types/node": "^20.14.2",
+    "node-gyp": "^10.1.0"
+  }
+}
