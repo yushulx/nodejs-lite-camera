@@ -4,8 +4,8 @@
     },
     "targets": [
         {
-            "target_name": "camera4nodejs",
-            "sources": ["src/barcode4nodejs.cc"],
+            "target_name": "litecam",
+            "sources": ["src/litecam.cc"],
             "defines": [
                 "NAPI_DISABLE_CPP_EXCEPTIONS"
             ],

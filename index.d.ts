@@ -1,4 +1,4 @@
-declare module "camera4nodejs" {
+declare module "litecam" {
     export class NodeCam {
         constructor();
 

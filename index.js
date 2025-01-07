@@ -1,4 +1,4 @@
-const addon = require('./build/Release/camera4nodejs');
+const addon = require('./build/Release/litecam');
 
 module.exports = {
     NodeCam: addon.NodeCam,

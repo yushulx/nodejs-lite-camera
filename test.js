@@ -1,6 +1,6 @@
-var camera4nodejs = require('./index.js');
-const nodecamera = new camera4nodejs.NodeCam();
-console.log(camera4nodejs.getDeviceList());
+var litecam = require('./index.js');
+const nodecamera = new litecam.NodeCam();
+console.log(litecam.getDeviceList());
 
 if (nodecamera.open(0)) {
     let mediaTypes = nodecamera.listMediaTypes();
@@ -9,7 +9,7 @@ if (nodecamera.open(0)) {
     for (let i = 0; i < 3; i++) {
         let frame = nodecamera.captureFrame();
         if (frame) {
-            camera4nodejs.saveJpeg(i + '.jpg', frame['width'], frame['height'], frame['data']);
+            litecam.saveJpeg(i + '.jpg', frame['width'], frame['height'], frame['data']);
         }
     }
 

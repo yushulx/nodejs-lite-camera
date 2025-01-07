@@ -27,9 +27,9 @@ node-gyp build
 ### Basic Example
 
 ```js
-var camera4nodejs = require('camera4nodejs');
-const nodecamera = new camera4nodejs.NodeCam();
-console.log(camera4nodejs.getDeviceList());
+var litecam = require('litecam');
+const nodecamera = new litecam.NodeCam();
+console.log(litecam.getDeviceList());
 
 if (nodecamera.open(0)) {
     let mediaTypes = nodecamera.listMediaTypes();
@@ -37,7 +37,10 @@ if (nodecamera.open(0)) {
 
     nodecamera.createWindow(nodecamera.getWidth(), nodecamera.getHeight(), "Camera Stream");
     while (nodecamera.waitKey('q')) {
-        nodecamera.showPreview();
+        let frame = nodecamera.captureFrame();
+        if (frame) {
+            nodecamera.showFrame(frame['width'], frame['height'], frame['data']);
+        }
     }
 
     nodecamera.release();
