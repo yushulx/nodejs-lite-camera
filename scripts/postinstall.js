@@ -5,7 +5,9 @@ function puts(error, stdout, stderr) { console.error(error) }
 
 const commands_linux = []
 
-const commands_darwin = []
+const commands_darwin = [
+    "install_name_tool -change @rpath/liblitecam.dylib @loader_path/liblitecam.dylib build/Release/litecam.node",
+]
 
 const commands_windows = []
 
