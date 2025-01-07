@@ -1,0 +1,17 @@
+{
+  "name": "barcode",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "barcode4nodejs": "^9.6.47",
+    "dynamsoft-capture-vision-for-node": "^2.6.1000",
+    "litecam": "^1.0.0"
+  }
+}
