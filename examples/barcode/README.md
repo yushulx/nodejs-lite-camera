@@ -13,7 +13,7 @@ This is a simple barcode scanner implemented with [lite-camera](https://www.npmj
 ## Installation
 
 ```bash
-npm install barcode4nodejs@9.6.47 litecam
+npm install barcode4nodejs litecam
 ```
 
 ## Usage
@@ -22,3 +22,4 @@ npm install barcode4nodejs@9.6.47 litecam
 node app.js
 ```
 
+![node.js multi-barcode scanner](https://www.dynamsoft.com/codepool/img/2025/01/nodejs-multi-barcode-scanner.png)

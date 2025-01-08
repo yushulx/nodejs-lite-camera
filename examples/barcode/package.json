@@ -10,7 +10,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "barcode4nodejs": "^9.6.47",
+    "barcode4nodejs": "^10.0.6",
     "dynamsoft-capture-vision-for-node": "^2.6.1000",
     "litecam": "^1.0.0"
   }
