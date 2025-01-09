@@ -49,10 +49,12 @@
                 ["OS=='mac'", {
                     "cflags": ["-std=c++11", "-DNAPI_CPP_EXCEPTIONS"],
                     "cflags_cc": ["-std=c++11", "-DNAPI_CPP_EXCEPTIONS"],
-                    "ldflags": ["-Wl,-rpath,@loader_path"],
-                    "libraries": [
-                        "-llitecam", "-L../platforms/macos"
-                    ],
+                    "link_settings": {
+                        "libraries": [
+                            "-Wl,-rpath,@loader_path",
+                            "-llitecam", "-L../platforms/macos"
+                        ],
+                    },
                     "copies": [
                         {
                             "destination": "build/Release/",
