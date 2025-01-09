@@ -1,7 +1,7 @@
 const { LicenseManager, CaptureVisionRouter, EnumPresetTemplate, EnumImagePixelFormat } = require('dynamsoft-capture-vision-for-node');
 LicenseManager.initLicense("DLS2eyJoYW5kc2hha2VDb2RlIjoiMjAwMDAxLTE2NDk4Mjk3OTI2MzUiLCJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInNlc3Npb25QYXNzd29yZCI6IndTcGR6Vm05WDJrcEQ5YUoifQ==");
 
-var litecam = require('litecam');
+const litecam = require('litecam');
 const nodecamera = new litecam.NodeCam();
 console.log(litecam.getDeviceList());
 
@@ -9,7 +9,6 @@ var isWorking = false;
 
 var results = null;
 
-var index = 1
 async function decode(buffer, width, height) {
     if (isWorking) {
         return;
@@ -23,7 +22,6 @@ async function decode(buffer, width, height) {
     imageData.format = EnumImagePixelFormat.IPF_RGB_888;
     results = await CaptureVisionRouter.captureAsync(imageData, EnumPresetTemplate.PT_READ_BARCODES);
 
-    index++;
     isWorking = false;
 }
 
