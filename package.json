@@ -1,6 +1,6 @@
 {
   "name": "litecam",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "litecam is a lightweight, cross-platform library for capturing RGB frames from cameras and displaying them. Designed with simplicity and ease of integration in mind, LiteCam supports Windows, Linux and macOS platforms.",
   "keywords": [
     "camera",
