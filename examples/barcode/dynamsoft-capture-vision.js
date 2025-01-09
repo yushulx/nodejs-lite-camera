@@ -22,7 +22,7 @@ async function decode(buffer, width, height) {
     imageData.stride = width * 3;
     imageData.format = EnumImagePixelFormat.IPF_RGB_888;
     results = await CaptureVisionRouter.captureAsync(imageData, EnumPresetTemplate.PT_READ_BARCODES);
-    await CaptureVisionRouter.terminateIdleWorkers();
+
     index++;
     isWorking = false;
 }
@@ -51,7 +51,9 @@ function show() {
     }
     else {
         nodecamera.release();
-
+        (async () => {
+            await CaptureVisionRouter.terminateIdleWorkers();
+        })();
     }
 }
 
