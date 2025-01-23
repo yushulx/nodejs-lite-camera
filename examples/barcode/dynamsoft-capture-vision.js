@@ -1,5 +1,5 @@
 const { LicenseManager, CaptureVisionRouter, EnumPresetTemplate, EnumImagePixelFormat } = require('dynamsoft-capture-vision-for-node');
-LicenseManager.initLicense("DLS2eyJoYW5kc2hha2VDb2RlIjoiMjAwMDAxLTE2NDk4Mjk3OTI2MzUiLCJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInNlc3Npb25QYXNzd29yZCI6IndTcGR6Vm05WDJrcEQ5YUoifQ==");
+LicenseManager.initLicense("LICENSE-LEY");
 
 const litecam = require('litecam');
 const nodecamera = new litecam.NodeCam();

@@ -1,4 +1,4 @@
-var litecam = require('./index.js');
+const litecam = require('./index.js');
 const nodecamera = new litecam.NodeCam();
 console.log(litecam.getDeviceList());
 
@@ -17,8 +17,10 @@ if (nodecamera.open(0)) {
 
     while (nodecamera.waitKey('q')) {
         // nodecamera.showPreview();
+        // let starttime = Date.now();
         let frame = nodecamera.captureFrame();
         if (frame) {
+            // console.log('Capture Time: ' + (Date.now() - starttime) + 'ms');
             nodecamera.showFrame(frame['width'], frame['height'], frame['data']);
         }
 
